@@ -1,11 +1,17 @@
+<?php
+    require_once("../php/sistema.php");
+
+    $testimonios = consultaSelect($conexion, "SELECT * FROM testimonios", "", []);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/testimonios.css">
     <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/acerca_de.css">
 </head>
 <body>
     <div id="menu_desplegable">
@@ -59,18 +65,29 @@
         </div>
     </div>
     <div id="filtro_negro" class="ausente"></div>
+
     <main>
-        <div class="acerca_de">
-            <h2>Fuentes de información</h2>
-            <ul>
-                <li>Marea Editorial</li>
-                <li>El Destap</li>
-                <li>Crimenes de Lesa Humanidad</li>
-                <li>Madres de Plaza de Mayo</li>
-                <li>Abuelas de Plaza de Mayo</li>
-            </ul>
-        </div>
+        <?php
+            foreach($testimonios as $testimonio){
+                echo "
+                <div class=\"testimonio\">
+                    <div>
+                        <img src=\"../img/". $testimonio["imagen_url"] ."\" alt=\"Persona testimonio\">
+                    </div>
+                    <div>
+                        <h3>". $testimonio["nombre_fuente"] ."</h3>
+                        <p class=\"textotestimonio\">
+                            ". $testimonio["texto_testimonio"] ."
+                        </p>
+                    </div>
+                        <button></button>
+                </div>
+                ";
+            }
+        ?>
     </main>
 </body>
+
+<script src="../js/testimonio.js"></script>
 <script src="../js/general.js"></script>
 </html>

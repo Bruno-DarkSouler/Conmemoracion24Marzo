@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de</title>
     <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/acerca_de.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <title>Formulario</title>
 </head>
 <body>
     <div id="menu_desplegable">
@@ -60,16 +60,16 @@
     </div>
     <div id="filtro_negro" class="ausente"></div>
     <main>
-        <div class="acerca_de">
-            <h2>Fuentes de información</h2>
-            <ul>
-                <li>Marea Editorial</li>
-                <li>El Destap</li>
-                <li>Crimenes de Lesa Humanidad</li>
-                <li>Madres de Plaza de Mayo</li>
-                <li>Abuelas de Plaza de Mayo</li>
-            </ul>
-        </div>
+        <h1>Formulario de nuevo testimonio</h1>
+        <form action="../php/subir_testimonio.php" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre de la victima">
+            <label for="testimonio">Testimonio</label>
+            <textarea name="testimonio" id="testimonio" placeholder="Fragmento del testimonio"></textarea>
+            <label for="imagen">Imagen</label>
+            <input type="file" id="archivo" name="archivo">
+            <input type="submit">
+        </form>
     </main>
 </body>
 <script src="../js/general.js"></script>

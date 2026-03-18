@@ -5,14 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/principal.css">
+    <link rel="stylesheet" href="./css/general.css">
 </head>
 <body>
-    <div class="hamburguesa"></div>
+    
+    <div id="menu_desplegable">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+    </div>
+
+    <div id="cuerpo_menu" class="cerrado">
+        <div id="cabecera_menu">
+            <span>Contenido</span>
+            <div id="boton_cerrar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+            </div>
+        </div>
+        <div>
+            <ul id="lista_navegacion">
+                <li>
+                    <a href="./index.html">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="./html/linea_tiempo.php">
+                        Eventos
+                    </a>
+                </li>
+                <li>
+                    <a href="./html/galeria.php">
+                        Galeria
+                    </a>
+                </li>
+                <li>
+                    <a href="./html/testimonios.php">
+                        Testimonios
+                    </a>
+                </li>
+                <li>
+                    <a href="./formulario.html">
+                        Formulario
+                    </a>
+                </li>
+                <li>
+                    <a href="./html/acercade.html">
+                        Testimonios
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="filtro_negro" class="ausente"></div>
+
     <header>
         <h1>24 de Marzo: Dia por la memoria, la verdad y la justicia</h1>
     </header>
     <main>
-        <div class="concepto">
+        <div class="concepto"><!-- texto a la izquierda e imagen a la derecha-->
             <div>
                 <p>
                     El 24 de marzo de 1976 comenzaba en Argentina una de las épocas más oscuras de nuestra historia. En la madrugada de ese día, superiores de las Fuerzas Armadas tomaron el poder a través de un golpe de Estado y derrocaron al entonces gobierno constitucional de Isabel Perón; de esta forma, comenzó una dictadura cívico-militar que duraría hasta 1983. Entre los años en que duró esta dictadura, más de 30 mil personas fueron desaparecidas, se perpetraron un centenar de secuestros, privaciones ilegítimas de libertad, torturas en centros clandestinos de detención, apropiación de recién nacidos y exilios forzados de miles de argentinos.
@@ -22,9 +75,9 @@
                 <img src="./img/collage.jpg" alt="">
             </div>
         </div>
-        <div class="concepto">
+        <div class="concepto"><!-- imagen a la izquierda y texto a la derecha-->
             <div>
-                <img src="" alt="">
+                <img src="./img/Desaparecidos.jpg" alt="">
             </div>
             <div>
                 <p>
@@ -33,11 +86,17 @@
                 </p>
             </div>
         </div>
-        <div class="concepto">
-            <p>
-                El Día Nacional de la Memoria por la Verdad y Justicia es una fecha en la que se conmemora y busca mantener vivos en la reflexión y memoria social los tristes acontecimientos producidos en la última dictadura militar. No con el objetivo de depositar una visión estática sobre aquella etapa tan oscura, no con el objetivo de perpetuar un ánimo social irreparable, no con la intención de vivir con la mirada puesta en el pasado… Pero sí con el objetivo de tener presente los errores cometidos y las consecuencias terribles que de ellos pueden desprenderse, sí con el objetivo de una consciente muestra de respeto por las familias víctimas de la desaparición de un hijo, una hija, una nieta o un nieto, sí con el objetivo de buscar justicia y dar luz a los acontecimientos que tuvieron lugar en aquella triste etapa de la historia argentina.
-            </p>
+        <div class="concepto"><!-- texto a la izquierda e imagen a la derecha-->
+            <div>
+                <p>
+                    El Día Nacional de la Memoria por la Verdad y Justicia es una fecha en la que se conmemora y busca mantener vivos en la reflexión y memoria social los tristes acontecimientos producidos en la última dictadura militar. No con el objetivo de depositar una visión estática sobre aquella etapa tan oscura, no con el objetivo de perpetuar un ánimo social irreparable, no con la intención de vivir con la mirada puesta en el pasado… Pero sí con el objetivo de tener presente los errores cometidos y las consecuencias terribles que de ellos pueden desprenderse, sí con el objetivo de una consciente muestra de respeto por las familias víctimas de la desaparición de un hijo, una hija, una nieta o un nieto, sí con el objetivo de buscar justicia y dar luz a los acontecimientos que tuvieron lugar en aquella triste etapa de la historia argentina.
+                </p>
+            </div>
+            <div>
+                <img src="./img/pañuelos blancos.jpg" alt="">
+            </div>
         </div>
     </main>
 </body>
+<script src="./js/general.js"></script>
 </html>

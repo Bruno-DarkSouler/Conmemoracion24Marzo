@@ -1,0 +1,33 @@
+label, input, textarea{
+    display: block;
+    width: 30vw;
+}
+
+input, textarea{
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    resize: none;
+}
+
+label, h1{
+    color: rgb(218, 218, 218);
+}
+
+h1{
+    text-align: center;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(19, 19, 19);
+}
+
+main{
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 3px solid rgb(44, 44, 44);
+}

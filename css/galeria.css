@@ -1,0 +1,96 @@
+body{
+    background-color: rgb(26, 26, 26);
+}
+
+.contenedor_imagen img{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    max-height: 240px;
+}
+
+#galeria{
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+#filtro_negro{
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.elemento_galeria{
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contenedor_imagen{
+    margin: 1.5rem;
+}
+
+.contenedor_etiqueta{
+    margin: 1.5rem;
+}
+
+.contenedor_etiqueta span{
+    display: block;
+    text-align: center;
+}
+
+header h1{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem calc(100vw / 6);
+    border: 5px rgb(238, 238, 238) dotted;
+    position: sticky;
+    border-left: none;
+    border-right: none;
+    color: rgb(238, 238, 238);
+}
+
+#boton_audio{
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    border-radius: 10000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    transition: background-color ease 250ms, color ease 250ms;
+    color: rgb(86, 233, 106);
+}
+
+#boton_audio:hover{
+    background-color: rgb(102, 102, 102);
+}
+
+.silenciado{
+    background-color: rgb(233, 86, 86) !important;
+    color: rgb(155, 155, 155) !important;
+}
+
+audio{
+    display: none;
+}
+
+#contenedor_video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+@media(width < 1080px){
+    #galeria{
+        grid-template-columns: auto auto auto;
+    }
+}

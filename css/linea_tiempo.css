@@ -1,18 +1,123 @@
+body{
+    background-color: rgb(26, 26, 26);
+}
+
+#linea{
+    border: 1px dashed rgb(231, 231, 231);
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
 #contenedor_linea{
-    height: 80vh;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
 }
 
 .evento{
-    background-color: rgb(238, 238, 238);
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none;
     justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 15vh;
+    width: 15vh;
+    background-color: rgb(49, 49, 49);
+    color: rgb(241, 241, 241);
+    z-index: 11;
+    border: 5px solid white;
+    transition: all ease 1s;
+    animation-name: aparicion_evento;
+    animation-duration: 0.5s;
 }
 
-.evento h2, .evento div, .evento p{
-    text-align: center;
+.evento:hover{
+    transform: scale(1.2);
+}
+
+.flecha{
+    border-radius: 50%;
+    height: 10vh;
+    width: 10vh;
+    background-color: white;
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+#flecha_izquierda{
+    left: 1rem;
+}
+
+#flecha_derecha{
+    right: 1rem;
+}
+
+.contenedor_imagen_evento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 1rem 0;
 }
 
+.contenedor_imagen_evento img{
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 70%;
+}
+
+.informacion_evento{
+    background-color: rgb(49, 49, 49);
+    color: rgb(243, 243, 243);
+    padding: 2rem;
+    border-radius: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+    display: none;
+}
+
+.informacion_evento h2{
+    text-align: center;
+}
+
+#filtro_negro_info{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 14;
+}
+
+.activa{
+    display: block !important;
+}
+
+.visible{
+    display: flex;
+}
+
+.ocultar_flecha{
+    display: none;
+}
+
+@keyframes aparicion_evento{
+    0%{transform: translateX(100vw);}
+    100%{transform: translateX(0);}
+}
